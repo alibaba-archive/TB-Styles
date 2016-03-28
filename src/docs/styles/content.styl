@@ -15,56 +15,57 @@
     padidng-bottom: 0
     margin-bottom: 0
 
-  p
-    display block
-    -webkit-margin-before 1em
-    -webkit-margin-after 1em
-    -webkit-margin-start 0px
-    -webkit-margin-end 0px
+  > div,
+  > div > .bs-docs-section,
+  > div .bs-callout
+    > h1
+      font-family $boldface
+      letter-spacing -0.02em
+      font-weight 500
+      font-style normal
+      font-size 60px
+      margin-left -3px
+      line-height 1
+      letter-spacing -0.02em
+      padding: 40px 0
+      margin-bottom 40px
+      border-bottom: 1px solid $preBd
+      color rgba(0,0,0,0.8)
+      text-align: center
 
-  h1
-    font-family $boldface
-    letter-spacing -0.02em
-    font-weight 500
-    font-style normal
-    font-size 60px
-    margin-left -3px
-    line-height 1
-    letter-spacing -0.02em
-    padding: 40px 0
-    margin-bottom 40px
-    border-bottom: 1px solid $preBd
-    color rgba(0,0,0,0.8)
-    text-align: center
+    > h2
+      font-size: 36px
 
-  h2
-    font-size: 36px
+    > h2, > h3, > h4, > h5, > h6
+      font-family $boldface
+      font-weight 700
+      margin-top: 40px
+      margin-left -1.8px
+      line-height 1.2
+      color rgba(0,0,0,0.8)
 
-  h2, h3, h4, h5, h6
-    font-family $boldface
-    font-weight 700
-    margin-top: 40px
-    margin-left -1.8px
-    line-height 1.2
-    color rgba(0,0,0,0.8)
+    > h3, > h5, > h6
+      font-size: 32px
+      font-weight 300
+      color: rgba(0,0,0,0.44)
 
-  h3, h5, h6
-    font-size: 32px
-    font-weight 300
-    color: rgba(0,0,0,0.44)
+    > h4
+      color: rgba(0,0,0,0.44)
 
-  ul:not(.dropdown-menu):not(.nav)
-    margin-top: 29px
-    padding-left: 0
+    > p
+      display block
+      -webkit-margin-before 1em
+      -webkit-margin-after 1em
+      -webkit-margin-start 0px
+      -webkit-margin-end 0px
 
-    ul
-      margin-top: 0
-      padding-left: 20px
+    > ul
+      margin-top: 29px
+      padding-left: 0
 
-  li:not(.dropdown-menu li):not(.list-group-item)
-    margin-left 30px
-    margin-bottom 12px
-    padding-top 2px
+      ul
+        margin-top: 0
+        padding-left: 20px
 
   .bs-example
     font-family: $boldface
@@ -79,9 +80,6 @@
       > &
         list-style-type: disc
         margin-left: 40px
-
-    h1
-      text-align: left
 
   .highlight
     background: $preBg
@@ -123,15 +121,7 @@
     border: 1px solid $preBd
 
   .bs-callout
-    border-left-color: #EEEEEE !important
-
-    h4
-      color: $grayDark
-      margin-top: 10px
-
-  .panel-heading h4,
-  .media-body h4
-    margin-top: 0
+    border-left-color: #eee !important
 
   .media-object
     min-width: 64px
@@ -145,4 +135,3 @@
 
 .modal
   font-family: $boldface
-

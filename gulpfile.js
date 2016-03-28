@@ -48,7 +48,7 @@ gulp.task('styles', function () {
 
 gulp.task('styles-min', function () {
   return gulp.src('dist/styles/ui.css')
-    .pipe(csso())
+    .pipe(csso({ restructure: false }))
     .pipe(rename('ui.min.css'))
     .pipe(gulp.dest('dist/styles/'))
 })
@@ -124,7 +124,7 @@ gulp.task('docs-styles', function () {
     }))
     )
     // .pipe(concat('build.css'))
-    .pipe(csso())
+    .pipe(csso({ restructure: false }))
     .pipe(gulp.dest('TB-Styles/styles/'))
     .pipe(connect.reload())
 })
@@ -148,7 +148,7 @@ gulp.task('docs-fonts', function () {
 
 /* ==== Watch & Serve ==== */
 gulp.task('watch', function () {
-  gulp.watch('src/styles/**/*', ['styles', 'docs'])
+  gulp.watch('src/styles/**/*', ['build'])
   gulp.watch(['src/docs/contents/**/*', 'src/docs/templates/**'], ['docs-contents'])
   gulp.watch('src/docs/styles/**', ['docs-styles'])
   gulp.watch('src/docs/scripts/**', ['docs-scripts'])
