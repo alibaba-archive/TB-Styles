@@ -11,7 +11,6 @@ var connect      = require('gulp-connect')
 var sequence     = require('gulp-sequence')
 var ghPages      = require('gulp-gh-pages')
 var sourcemaps   = require('gulp-sourcemaps')
-var livereload   = require('gulp-livereload')
 var autoprefixer = require('gulp-autoprefixer')
 
 var fs           = require('fs')
@@ -165,7 +164,7 @@ gulp.task('serve', ['watch'], function () {
 
 /* ==== Deploy ==== */
 gulp.task('deploy', function() {
-  gulp.src('_gh_pages/**/*')
+  return gulp.src('_gh_pages/**/*')
     .pipe(ghPages())
 })
 
