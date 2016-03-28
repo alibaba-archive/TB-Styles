@@ -24,7 +24,7 @@ var package      = require('./package.json')
 
 /* ==== Tasks ==== */
 gulp.task('clean', function () {
-  return gulp.src(['_gh_pages', 'dist'], {read: false})
+  return gulp.src(['TB-Styles', 'dist'], {read: false})
     .pipe(rimraf({
       force: true
     }))
@@ -110,7 +110,7 @@ gulp.task('docs-contents', function () {
   gulp.src('src/docs/contents/**/*.md')
     .pipe(renderPost)
     .pipe(rename({extname: '.html'}))
-    .pipe(gulp.dest('_gh_pages/'))
+    .pipe(gulp.dest('TB-Styles/'))
     .pipe(connect.reload())
 })
 
@@ -125,7 +125,7 @@ gulp.task('docs-styles', function () {
     )
     // .pipe(concat('build.css'))
     .pipe(csso())
-    .pipe(gulp.dest('_gh_pages/styles/'))
+    .pipe(gulp.dest('TB-Styles/styles/'))
     .pipe(connect.reload())
 })
 
@@ -137,13 +137,13 @@ gulp.task('docs-scripts', function () {
   )
   .pipe(concat('build.js'))
   .pipe(uglify())
-  .pipe(gulp.dest('_gh_pages/scripts/'))
+  .pipe(gulp.dest('TB-Styles/scripts/'))
   .pipe(connect.reload())
 })
 
 gulp.task('docs-fonts', function () {
   gulp.src('dist/fonts/**')
-    .pipe(gulp.dest('_gh_pages/fonts/'))
+    .pipe(gulp.dest('TB-Styles/fonts/'))
 })
 
 /* ==== Watch & Serve ==== */
@@ -156,7 +156,6 @@ gulp.task('watch', function () {
 
 gulp.task('serve', ['watch'], function () {
   connect.server({
-    root: '_gh_pages',
     port: 8001,
     livereload: true
   });
@@ -164,7 +163,7 @@ gulp.task('serve', ['watch'], function () {
 
 /* ==== Deploy ==== */
 gulp.task('deploy', function() {
-  return gulp.src('_gh_pages/**/*')
+  return gulp.src('TB-Styles/**/*')
     .pipe(ghPages())
 })
 
