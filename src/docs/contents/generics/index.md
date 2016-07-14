@@ -2060,7 +2060,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <div class="bs-docs-section">
 <h1 id="icons" class="page-header">Icons</h1>
 <h2 id="icons-glyphs">Available icons</h2>
-<p>Check out <a href="http://teambition.github.io/TB-Icons/font-icons/" target="_blank">TB-Icons List</a> to see all available icons.</p>
+<p>Check out <a href="http://teambition.github.io/TB-Icons/v2/iconfonts/" target="_blank">TB-Icons List</a> to see all available icons.</p>
 <h2 id="icons-how-to-use">How to use</h2>
 <p>For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.</p>
 <div class="bs-callout bs-callout-danger" id="callout-icons-dont-mix">

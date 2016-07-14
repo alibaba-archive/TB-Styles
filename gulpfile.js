@@ -74,7 +74,7 @@ gulp.task('scripts', function () {
 })
 
 gulp.task('fonts', function () {
-  return gulp.src('node_modules/tb-icons/dist/fonts/**')
+  return gulp.src('node_modules/tb-icons/lib/fonts/**')
     .pipe(gulp.dest('dist/fonts/'))
 })
 
