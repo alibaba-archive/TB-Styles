@@ -42,7 +42,7 @@ gulp.task('styles', function () {
         cascade: false
     }))
     .pipe(replace("${version}", package.version))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist/styles/'))
 })
 
