@@ -1,8 +1,13 @@
 {
   "name": "tb-styles",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Stylus-based, OOCSS, SMACSS, flexible and powerful UI framework built on top of Bootstrap Stylus.",
   "license": "MIT",
+  "scripts": {
+    "dev": "gulp build && gulp serve",
+    "build": "gulp build",
+    "ghpages": "gulp deploy"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/teambition/TB-Styles.git"
