@@ -1,5 +1,7 @@
+.publish
 node_modules
 TB-Styles
+
+*.log
 .DS_Store
 .idea
-.publish
