@@ -42,7 +42,7 @@ gulp.task('styles', function () {
         cascade: false
     }))
     .pipe(replace("${version}", package.version))
-    .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('./', { sourceRoot: '/node_modules/tb-styles/styles/' }))
     .pipe(gulp.dest('dist/styles/'))
 })
 
@@ -123,7 +123,6 @@ gulp.task('docs-styles', function () {
       'paths': ['./node_modules']
     }))
     )
-    // .pipe(concat('build.css'))
     .pipe(csso({ restructure: false }))
     .pipe(gulp.dest('TB-Styles/styles/'))
     .pipe(connect.reload())

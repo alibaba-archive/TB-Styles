@@ -1,6 +1,6 @@
 {
   "name": "tb-styles",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Stylus-based, OOCSS, SMACSS, flexible and powerful UI framework built on top of Bootstrap Stylus.",
   "license": "MIT",
   "scripts": {
